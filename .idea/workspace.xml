@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5a4b52b4-f25e-4976-8d33-1f5563e15b23" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Article/Article.js" beforeDir="false" afterPath="$PROJECT_DIR$/Article/Article.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Menu/Menu.js" beforeDir="false" afterPath="$PROJECT_DIR$/Menu/Menu.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -31,6 +33,7 @@
     <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
     <property name="settings.editor.selected.configurable" value="liveEdit" />
   </component>
   <component name="RemoteSynchronizer">
@@ -76,6 +79,7 @@
       <updated>1572928487430</updated>
       <workItem from="1572928488938" duration="420000" />
       <workItem from="1573007007257" duration="9119000" />
+      <workItem from="1573056139064" duration="4136000" />
     </task>
     <servers />
   </component>

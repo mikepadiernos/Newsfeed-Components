@@ -156,9 +156,9 @@ const data = [
   data.push(myArticle);
  // console.log(data);
 
- const parent = document.querySelector('.articles');
+ const articleParent = document.querySelector('.articles');
 
  data.forEach(i => {
    const newArticle = createArticle(i.title, i.date, i.firstParagraph, i.secondParagraph, i.thirdParagraph);
-   parent.appendChild(newArticle);
+   articleParent.appendChild(newArticle);
  });
