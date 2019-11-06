@@ -104,61 +104,61 @@ const data = [
 
   Your function should take either an object as it's one argument, or 5 separate arguments mapping to each piece of the data object above.
   */
-function createArticle(title, date, firstParagraph, secondParagraph, thirdParagraph) {
-
-  // ELEMENTS
-  const article = document.createElement('div');
-  const articleHead = document.createElement('h2');
-  const articleDate = document.createElement('p');
-  const articleFirst = document.createElement('p');
-  const articleSecond = document.createElement('p');
-  const articleThird = document.createElement('p');
-  const articleExpand = document.createElement('span');
-
-  article.appendChild(articleHead);
-  article.appendChild(articleDate);
-  article.appendChild(articleFirst);
-  article.appendChild(articleSecond);
-  article.appendChild(articleThird);
-  article.appendChild(articleThird);
-  article.appendChild(articleExpand);
-
-  // CLASSES
-  article.classList.add('article');
-  articleDate.classList.add('date');
-  articleExpand.classList.add('expandButton');
-
-  // CONTENT
-  articleHead.textContent = title;
-  articleDate.textContent = date;
-  articleFirst.textContent = firstParagraph;
-  articleSecond.textContent = secondParagraph;
-  articleThird.textContent = thirdParagraph;
-  articleExpand.textContent = 'Expand';
-
   // Step 2: Add an event listener to the expandButton span. This event listener should toggle the class 'article-open' on the 'article' div.
-  articleExpand.addEventListener('click', () => {
-    article.classList.toggle('article-open');
-  });
-
   // Step 3: return the entire component.
-  return article;
-}
   // Step 4: Map over the data, creating a component for each oject and add each component to the DOM as children of the 'articles' div.
-  const parent = document.querySelector('.articles');
-
-  data.forEach(i => {
-    const newArticle = createArticle(i.title, i.date, i.firstParagraph, i.secondParagraph, i.thirdParagraph);
-    parent.appendChild(newArticle);
-  });
-
   // Step 5: Add a new article to the array. Make sure it is in the same format as the others. Refresh the page to see the new article.
-  let newArticle = {
-    title: 'A new Amazing title!',
-    date: Date(),
-    firstParagraph: '',
-    secondParagraph: '',
-    thirdParagraph: ''
-  };
-  console.log(newArticle);
 
+ function createArticle(title, date, firstParagraph, secondParagraph, thirdParagraph) {
+
+   // ELEMENTS
+   const article = document.createElement('div');
+   const articleHead = document.createElement('h2');
+   const articleDate = document.createElement('p');
+   const articleFirst = document.createElement('p');
+   const articleSecond = document.createElement('p');
+   const articleThird = document.createElement('p');
+   const articleExpand = document.createElement('span');
+
+   article.appendChild(articleHead);
+   article.appendChild(articleDate);
+   article.appendChild(articleFirst);
+   article.appendChild(articleSecond);
+   article.appendChild(articleThird);
+   article.appendChild(articleThird);
+   article.appendChild(articleExpand);
+
+   // CLASSES
+   article.classList.add('article');
+   articleDate.classList.add('date');
+   articleExpand.classList.add('expandButton');
+
+   // CONTENT
+   articleHead.textContent = title;
+   articleDate.textContent = date;
+   articleFirst.textContent = firstParagraph;
+   articleSecond.textContent = secondParagraph;
+   articleThird.textContent = thirdParagraph;
+   articleExpand.textContent = 'Expand';
+
+   articleExpand.addEventListener('click', () => {
+     article.classList.toggle('article-open');
+   });
+   return article;
+ }
+ const myArticle = {
+   title: 'A new AMAZING article!',
+   date: Date(),
+   firstParagraph: `Eleifend mi in nulla posuere sollicitudin aliquam ultrices sagittis orci. Pellentesque elit eget gravida cum sociis natoque penatibus et.`,
+   secondParagraph: `Id porta nibh venenatis cras sed felis eget velit aliquet. Aliquam malesuada bibendum arcu vitae elementum. Nam libero justo laoreet sit amet cursus. Morbi enim nunc faucibus a pellentesque sit amet porttitor. Condimentum vitae sapien pellentesque habitant morbi tristique senectus et.`,
+   thirdParagraph: `Consequat nisl vel pretium lectus quam id leo. Quam quisque id diam vel quam elementum pulvinar. Sit amet dictum sit amet justo donec enim diam vulputate. Mauris nunc congue nisi vitae suscipit tellus mauris. Non odio euismod lacinia at quis risus sed vulputate. Proin nibh nisl condimentum id venenatis. Gravida arcu ac tortor dignissim convallis aenean et tortor at. Donec et odio pellentesque diam volutpat commodo sed. Quis ipsum suspendisse ultrices gravida dictum fusce ut placerat orci. Congue nisi vitae suscipit tellus mauris a. Consequat semper viverra nam libero justo laoreet sit. Metus vulputate eu scelerisque felis imperdiet. Volutpat ac tincidunt vitae semper quis lectus. Velit scelerisque in dictum non. Proin fermentum leo vel orci porta non pulvinar neque. Sed tempus urna et pharetra pharetra.`
+ };
+  data.push(myArticle);
+ // console.log(data);
+
+ const parent = document.querySelector('.articles');
+
+ data.forEach(i => {
+   const newArticle = createArticle(i.title, i.date, i.firstParagraph, i.secondParagraph, i.thirdParagraph);
+   parent.appendChild(newArticle);
+ });
