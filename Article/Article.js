@@ -141,9 +141,18 @@ const data = [
    articleThird.textContent = thirdParagraph;
    articleExpand.textContent = 'Expand';
 
+   article.style.transition = '0.4s';
+
    articleExpand.addEventListener('click', () => {
-     article.classList.toggle('article-open');
+     if (article.classList.contains('article-open')) {
+       article.classList.toggle('article-open');
+       articleExpand.textContent = 'Expand';
+     } else {
+       article.classList.toggle('article-open');
+       articleExpand.textContent = 'Collapse';
+     }
    });
+
    return article;
  }
  const myArticle = {

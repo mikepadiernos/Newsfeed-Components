@@ -39,12 +39,14 @@ function newMenu(a) {
   // CLASSES
   menu.classList.add('menu');
 
+  // LIST ITEMS
   a.forEach(i => {
     const menuListItem = document.createElement('li');
     menuList.appendChild(menuListItem);
     menuListItem.textContent += i;
   });
 
+  // FUNCTIONALITY
   let menuClick = document.querySelector('.menu-button');
 
   menuClick.addEventListener('click', () => {
