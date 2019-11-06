@@ -134,8 +134,12 @@ function createArticle(title, date, firstParagraph, secondParagraph, thirdParagr
   articleFirst.textContent = firstParagraph;
   articleSecond.textContent = secondParagraph;
   articleThird.textContent = thirdParagraph;
+  articleExpand.textContent = 'Expand';
 
   // Step 2: Add an event listener to the expandButton span. This event listener should toggle the class 'article-open' on the 'article' div.
+  articleExpand.addEventListener('click', () => {
+    article.classList.toggle('article-open');
+  });
 
   // Step 3: return the entire component.
   return article;
@@ -149,5 +153,12 @@ function createArticle(title, date, firstParagraph, secondParagraph, thirdParagr
   });
 
   // Step 5: Add a new article to the array. Make sure it is in the same format as the others. Refresh the page to see the new article.
-
+  let newArticle = {
+    title: 'A new Amazing title!',
+    date: Date(),
+    firstParagraph: '',
+    secondParagraph: '',
+    thirdParagraph: ''
+  };
+  console.log(newArticle);
 
