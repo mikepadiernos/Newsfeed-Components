@@ -34,4 +34,13 @@ function createMenu() {
   const menu = document.createElement('div');
   const menuList = document.createElement('ul');
   const menuListItem = document.createElement('li');
+
+  menu.appendChild(menuList);
+  menuList.appendChild(menuListItem);
+
+  // CLASSES
+  menu.classList.add('menu');
+
+  // CONTENT
+  menuListItem.textContent = menuItems[];
 }
